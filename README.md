@@ -34,18 +34,15 @@ Les résultats obtenus sont volontairement flouttés :
 
 ##  💻 Technologies
 
-### Python  
 [![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge)](https://www.python.org/)  
 Le langage principal utilisé
 
-### OpenCV  
 [![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=white&style=for-the-badge)](https://opencv.org/)  
  Pour le traitement et la manipulation des images
 
-### PaddleOCR  
 [![PaddleOCR](https://img.shields.io/badge/PaddleOCR-0073CF?style=for-the-badge)](https://github.com/PaddlePaddle/PaddleOCR)  
 Un framework avancé et rapide pour l’OCR
-### MySQL  
+
 [![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white&style=for-the-badge)](https://www.mysql.com/)  
 Utilisé pour stocker toutes les données extraites
 
