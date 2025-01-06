@@ -24,8 +24,6 @@ Les résultats obtenus sont volontairement flouttés :
 
 
 
-
-
 ## 🛠️ Fonctionnalités Principales
 
 - **Gestion des Qualités de Photo** : Traitement des images de qualité variable pour améliorer la reconnaissance sous différents éclairages.
@@ -41,5 +39,3 @@ Les résultats obtenus sont volontairement flouttés :
    ```bash
    git clone https://github.com/votre-nom-utilisateur/ocr-id-suisse.git
    cd ocr-id-suisse
-
-( PS : Quand j’ai créé ce projet, j’étais encore en plein apprentissage et je n’avais pas encore pensé à faire un fichier requirements.txt pour installer les dépendances automatiquement. Du coup, si vous voulez tester le projet, il faudra installer les packages à la main) :(  
