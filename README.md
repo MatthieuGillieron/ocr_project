@@ -9,7 +9,6 @@ Spécialement conçu pour extraire des données à partir de cartes d'identité 
 
 Les données extraites sont automatiquement stockées dans une base de données MySQL pour faciliter leur gestion et leur accès.
 
----
 
 ## 🖼️ Aperçu Visuel
 
@@ -18,12 +17,12 @@ Voici un aperçu des résultats obtenus avec le projet :
 ### 📋 Image avec Extraction Réussie
 ![Exemple d'ID Valide](images/idOk.png)
 
----
+
 
 ### ⚠️ Image avec doublons
 ![Exemple d'ID Non Valide](images/idNok.png)
 
----
+
 
 
 
@@ -34,7 +33,7 @@ Voici un aperçu des résultats obtenus avec le projet :
 - **Précision Optimisée** : Entraînement sur un ensemble de données étendu pour des résultats plus précis.
 - **Stockage Structuré** : Sauvegarde des données extraites dans une base MySQL pour un accès et une gestion simplifiés.
 - **Adaptabilité** : Compatible avec les cartes d'identité suisses.
-
+<br>
 ---
 
 
