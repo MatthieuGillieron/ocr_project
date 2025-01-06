@@ -35,7 +35,6 @@ Les résultats obtenus sont volontairement flouttés :
 ## 🚀 Comment Utiliser ce Projet
 
 1. **Cloner le Dépôt**  
-<br>
    ```bash
    git clone https://github.com/votre-nom-utilisateur/ocr-id-suisse.git
    cd ocr-id-suisse
