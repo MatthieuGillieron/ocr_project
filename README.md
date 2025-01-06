@@ -12,7 +12,7 @@ Les données extraites sont automatiquement stockées dans une base de données 
 
 ## 🖼️ Aperçu Visuel
 
-Voici un aperçu des résultats obtenus avec le projet :
+Les résultats obtenus sont volontairement flouttés :
 
 ### 📋 Image avec Extraction Réussie
 ![Exemple d'ID Valide](images/idOk.png)
@@ -33,9 +33,8 @@ Voici un aperçu des résultats obtenus avec le projet :
 - **Précision Optimisée** : Entraînement sur un ensemble de données étendu pour des résultats plus précis.
 - **Stockage Structuré** : Sauvegarde des données extraites dans une base MySQL pour un accès et une gestion simplifiés.
 - **Adaptabilité** : Compatible avec les cartes d'identité suisses.
+- 
 <br>
----
-
 
 ## 🚀 Comment Utiliser ce Projet
 
