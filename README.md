@@ -32,13 +32,15 @@ Les résultats obtenus sont volontairement flouttés :
 - **Extraction de Données Personnelles** : Identification précise et fiable des informations critiques.
 - **Précision Optimisée** : Entraînement sur un ensemble de données étendu pour des résultats plus précis.
 - **Stockage Structuré** : Sauvegarde des données extraites dans une base MySQL pour un accès et une gestion simplifiés.
-- **Adaptabilité** : Compatible avec les cartes d'identité suisses.
-- 
+- **Adaptabilité** : Compatible avec les cartes d'identité suisses. 
 <br>
 
 ## 🚀 Comment Utiliser ce Projet
 
 1. **Cloner le Dépôt**  
+<br>
    ```bash
    git clone https://github.com/votre-nom-utilisateur/ocr-id-suisse.git
    cd ocr-id-suisse
+<br>
+( PS : Quand j’ai créé ce projet, j’étais encore en plein apprentissage et je n’avais pas encore pensé à faire un fichier requirements.txt pour installer les dépendances automatiquement. Du coup, si vous voulez tester le projet, il faudra installer les packages à la main) :(  
