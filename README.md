@@ -10,7 +10,6 @@ Spécialement conçu pour extraire des données à partir de cartes d'identité 
 Les données extraites sont automatiquement stockées dans une base de données MySQL pour faciliter leur gestion et leur accès.
 
 ---
----
 
 ## 🖼️ Aperçu Visuel
 
