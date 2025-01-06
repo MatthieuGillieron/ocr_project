@@ -16,10 +16,8 @@ def filter_results_by_confidence(results, confidence_threshold=0.5):
 def extract_info_with_conditions(results, index, pattern=None, suffix=None):
     for res in results[index:]:
         text = res[1][0]
-        # Appliquer le filtre par motif si spécifié
         if pattern and not pattern.match(text):
             continue
-        # Appliquer le filtre par suffixe si spécifié
         if suffix and not text.endswith(suffix):
             continue
 
@@ -29,44 +27,35 @@ def extract_info_with_conditions(results, index, pattern=None, suffix=None):
         return text
     return None
 
-# Fonction pour vérifier si l'ID existe déjà dans la base de données
 def id_exists_in_database(id_text):
-    # Connectez-vous à la base de données MySQL
     connection = mysql.connector.connect(
         host='localhost',
         user='root',
-        password='2007IFAGE',
+        password='put your password :)',
         database='swiss_id_db'
     )
 
-    # Créez un curseur pour exécuter des requêtes SQL
     cursor = connection.cursor()
 
     # Vérifiez si l'ID existe déjà dans la base de données
     select_query = "SELECT * FROM swiss_table WHERE id = %s"
     cursor.execute(select_query, (id_text,))
 
-    # Récupérez le résultat
     result = cursor.fetchone()
 
-    # Fermez le curseur et la connexion
     cursor.close()
     connection.close()
 
     return result is not None
 
-# Fonction principale pour extraire les informations de l'image
 def extract_info_from_image(img_path):
-    # Initialisation du modèle OCR
     ocr_model = PaddleOCR(lang='fr', use_gpu=False)
 
-    # Résultats de l'OCR
     result = ocr_model.ocr(img_path)
 
     # Filtrer les résultats par seuil de confiance
     filtered_result = filter_results_by_confidence(result[0])
 
-    # init. des indexs
     id_index = 0
     nom_index = 0
     prenom_index = 0
@@ -81,7 +70,6 @@ def extract_info_from_image(img_path):
 
     id_index += 1
 
-    # Vérification si l'ID existe déjà dans la base de données
     if id_exists_in_database(id_text):
         return None, None, None, None, True  # Signal pour indiquer une ID dupliquée
 
@@ -116,11 +104,10 @@ def extract_info_from_image(img_path):
     connection = mysql.connector.connect(
         host='localhost',
         user='root',
-        password='2007IFAGE',
+        password='your password ;)',
         database='swiss_id_db'
     )
 
-    # Créez un curseur pour exécuter des requêtes SQL
     cursor = connection.cursor()
 
     # Insérez les données dans la base de données
@@ -132,17 +119,14 @@ def extract_info_from_image(img_path):
     # Validez les changements dans la base de données
     connection.commit()
 
-    # Fermez le curseur et la connexion
     cursor.close()
     connection.close()
 
     return id_text, nom_text, prenom_text, date_naissance_text, False
 
-# Streamlit
 def main():
     st.title("Swiss ID")
 
-    # upload dans la barre latérale
     uploaded_file = st.sidebar.file_uploader("Choisissez une ID...", type=["jpg", "jpeg", "png"])
 
     if uploaded_file is not None:
@@ -158,9 +142,7 @@ def main():
                     future = executor.submit(extract_info_from_image, image_np)
                     id_text, nom_text, prenom_text, date_naissance_text, duplicate_id = future.result()
 
-                # Vérification si l'ID existe déjà
                 if id_text is not None:
-                    # Afficher les résultats dans la barre principale
                     st.write("Résultats OCR:")
                     st.write(f"ID: {id_text}")
                     st.write(f"Nom: {nom_text}")
@@ -177,10 +159,8 @@ def main():
                 elif id_text is None:
                     st.error('Une meilleure image est nécessaire', icon="🚨")
                 else:
-                    # Afficher un message de succès une fois le traitement terminé
                     st.success('Traitement terminé!')
             except Exception as e:
-                # Si une exception survient, afficher un message d'erreur
                 st.error(f"Erreur : {str(e)}", icon="🚨")
 
 if __name__ == "__main__":
