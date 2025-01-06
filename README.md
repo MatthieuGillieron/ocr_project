@@ -9,6 +9,7 @@ Spécialement conçu pour extraire des données à partir de cartes d'identité 
 
 Les données extraites sont automatiquement stockées dans une base de données MySQL pour faciliter leur gestion et leur accès.
 
+<br>
 
 ## 🖼️ Aperçu Visuel
 
@@ -33,7 +34,6 @@ Les résultats obtenus sont volontairement flouttés :
 - **Précision Optimisée** : Entraînement sur un ensemble de données étendu pour des résultats plus précis.
 - **Stockage Structuré** : Sauvegarde des données extraites dans une base MySQL pour un accès et une gestion simplifiés.
 - **Adaptabilité** : Compatible avec les cartes d'identité suisses. 
-<br>
 
 ## 🚀 Comment Utiliser ce Projet
 
@@ -42,5 +42,6 @@ Les résultats obtenus sont volontairement flouttés :
    ```bash
    git clone https://github.com/votre-nom-utilisateur/ocr-id-suisse.git
    cd ocr-id-suisse
+
 <br>
 ( PS : Quand j’ai créé ce projet, j’étais encore en plein apprentissage et je n’avais pas encore pensé à faire un fichier requirements.txt pour installer les dépendances automatiquement. Du coup, si vous voulez tester le projet, il faudra installer les packages à la main) :(  
